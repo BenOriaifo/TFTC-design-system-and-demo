@@ -23,7 +23,7 @@ Admin: `/admin/login`, `/admin` (private staff **demo** access code).
 
 ## What's implemented
 
-- Approved TFTC visual style: white, charcoal `#141414`, electric blue `#0066FF`, pale blue `#E8F1FF`, Inter-style system stack, simple blue crown.
+- TFTC visual system v2: near-black canvas, charcoal panels, warm gold primary actions, light typography and restrained green/red status colours. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md); reference images are retained in `design-references/`.
 - 26 initial fictional contestants plus publicly registered **fictional** demo entries. The public directory supports search by name/ID, category and city filters, sorting, zero-results handling and shareable profile links. Individual profiles show eligibility, rank and a clearly labeled nonfunctional audition-media placeholder.
 - Official demo bundles: 1=₦50, 11=₦500, 25=₦1,000, 70=₦2,500, 155=₦5,000, 325=₦10,000.
 - A guarded Supabase Edge Function and atomic Postgres function credit **shared** mock vote totals, log unique transaction references, prevent retry double-credit, and enforce rate limits. Failed mock transactions credit zero votes.
@@ -80,7 +80,7 @@ No real payments, emails or SMS are sent from this demo, and it must not be used
 
 ## Gradual-build UX and external-media enhancement (staged release candidate)
 
-The clean TFTC design remains charcoal, electric blue, pale blue and white. No cinematic homepage is included.
+The TFTC design uses the charcoal-and-gold system documented in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md). No cinematic homepage is included.
 
 - Public visitor: discover fictional contestants, view illustrated stand-in portraits, share a unique /contestant/TFTC-XXXX profile URL, watch an approved YouTube link in a privacy-enhanced player after clicking, or open an approved SoundCloud link. The empty state is intentional if no media has been approved.
 - Supporter: select one of six fixed voting bundles, see fictional supporter detail fields (browser-only), simulate a successful or failed checkout and check public ranking. No payment, email or SMS is sent, and no real voter data is stored.
