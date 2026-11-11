@@ -416,3 +416,147 @@ button{font:inherit}
 .tftc-auth-shell .contestant-access-form label{font-size:12px;font-weight:800;color:#31415c}
 .tftc-auth-shell .contestant-access-form .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 @media(max-width:780px){.tftc-auth-shell{grid-template-columns:1fr}.legacy-access-panel{padding:19px}}
+
+
+/* TFTC Design System v2 — charcoal, gold and high-contrast status colours.
+   Source: design-references/WhatsApp Image 2026-11-11 at 2.21.53 AM.jpeg
+   This layer intentionally supersedes the earlier blue/white visual treatment. */
+:root{
+  color-scheme:dark;
+  --bg-950:#0b0b0e;
+  --bg-900:#111116;
+  --bg-800:#17171d;
+  --bg-700:#202027;
+  --panel:#17171d;
+  --panel-alt:#1c1c23;
+  --panel-strong:#25252e;
+  --surface:#202027;
+  --surface-soft:#292932;
+  --line:rgba(255,255,255,.09);
+  --line-strong:rgba(255,255,255,.17);
+  --text:#f6f4ef;
+  --muted:#a5a3ad;
+  --muted-strong:#d4d1d9;
+  --blue:#d9ad27;
+  --blue-soft:#302817;
+  --gold:#d8ad27;
+  --gold-strong:#f0ca3d;
+  --gold-warm:#c99b16;
+  --purple:#5728dc;
+  --green:#20a36c;
+  --red:#dc414b;
+  --shadow:rgba(0,0,0,.35);
+  --radius-lg:10px;
+  --radius-md:9px;
+  --radius-sm:7px;
+  --container:1180px;
+}
+html{background:var(--bg-950);scrollbar-color:#45434a var(--bg-950)}
+body{background:var(--bg-950);color:var(--text)}
+::selection{background:rgba(216,173,39,.35);color:#fff}
+a{color:inherit}
+h1,h2,h3,h4,strong{color:var(--text)}
+h1 em{color:var(--gold);font-family:Georgia,serif}
+.eyebrow{color:var(--gold);letter-spacing:.16em}
+.intro,.muted,.fine-print{color:var(--muted)}
+.head{background:rgba(11,11,14,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.bar{min-height:72px}
+.brand,.brand small,.nav{color:var(--text)}
+.brand em,.nav a[aria-current="page"],.nav a:hover{color:var(--gold)}
+.brand small{opacity:.65}
+.mark{background:#29242a;color:var(--gold)}
+.mobile-nav summary{border-color:var(--line-strong);background:var(--panel);color:var(--text);min-height:44px}
+.mobile-nav nav{background:var(--panel);border-color:var(--line-strong);box-shadow:0 18px 48px #0009}
+.mobile-nav nav a{color:var(--text)}
+.mobile-nav nav a:hover{background:#292313;color:var(--gold)}
+.btn,.outline{min-height:48px;border-radius:8px;padding:11px 19px;font-weight:750}
+.btn{background:var(--gold);color:#17130a;border:1px solid var(--gold);box-shadow:none}
+.btn:hover{background:var(--gold-strong);color:#17130a;transform:translateY(-1px)}
+.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.outline:hover{background:rgba(216,173,39,.1);border-color:var(--gold-strong);color:var(--gold-strong);box-shadow:none}
+button:disabled,.btn:disabled{opacity:.48;cursor:not-allowed}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #f5d83d;outline-offset:3px}
+.hero{border-color:var(--line)}
+.hero-stats>div,.prizes>div,.steps>div,.stats>div,.home-dates>div,.faq-grid>div{background:var(--panel);border:1px solid var(--line);border-radius:10px;color:var(--text)}
+.hero-stats .dark,.prizes .dark{background:#25232a;color:var(--text)}
+.hero-stats .soft,.prizes .soft{background:#302817;color:var(--gold)}
+.hero-stats span,.prizes span,.stats small,.home-dates span{color:var(--muted)}
+.hero-stats strong,.prizes strong,.stats strong{color:var(--text)}
+.steps b{background:#302817;color:var(--gold)}
+.card,.panel,.rank-list{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.card{color:var(--text)}
+.card-body{background:var(--panel)}
+.card-body small,.directory-id,.profile-code{color:var(--gold)}
+.card p,.rank-row small{color:var(--muted)}
+.portrait,.directory-portrait,.profile-stage{background:linear-gradient(145deg,#302817,#4a3a19 55%,#202027);color:var(--gold)}
+.rank-row{border-color:var(--line)}
+.rank-row:hover{background:#24232a}
+.rank-row b{color:var(--gold)}
+.rank-row.qualifying{background:rgba(216,173,39,.055)}
+.packages>div,.packages .bundle,.selection .bundle{background:var(--panel-alt);border:1px solid var(--line-strong);color:var(--text);border-radius:9px}
+.selection .bundle:hover{border-color:var(--gold)}
+.selection .bundle.selected{background:#302817;border-color:var(--gold);color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.vote-current{background:#292313;border:1px solid rgba(216,173,39,.35)}
+.vote-current span,.vote-current strong{color:var(--gold)}
+.vote-summary{border-color:var(--line)}
+.vote-success{background:#142b22;border:1px solid #20885f;color:#9ce3bf}
+.vote-failure,.vote-error{background:#301b20;border:1px solid #b93643;color:#ffb1b7}
+.text-link,.vote-receipt-actions a{color:var(--gold)}
+.refresh-indicator{color:var(--muted)}
+.registration-fields label,.demo-login label,.staff-login label,.staff-edit label,.studio-controls label,
+.staff-access-form>label,.contestant-access-form>label,.mock-supporter-fields label,
+.directory-toolbar label span{color:var(--muted-strong)}
+.registration-fields input,.registration-fields select,.registration-fields textarea,.demo-login input,
+.staff-login input,.staff-edit input,.staff-edit textarea,.studio-controls select,.staff-search,
+.directory-toolbar input,.directory-toolbar select,.mock-supporter-fields input,
+.staff-access-form>input,.contestant-access-form>input,.tftc-auth-shell .contestant-access-form input{
+  background:#0d0d11;color:var(--text);border:1px solid #3a3942;border-radius:8px;min-height:46px;
+}
+.registration-fields input::placeholder,.demo-login input::placeholder,
+.directory-toolbar input::placeholder{color:#777}
+.registration-fields input:focus,.registration-fields select:focus,.registration-fields textarea:focus,
+.demo-login input:focus,.directory-toolbar input:focus-visible,.directory-toolbar select:focus-visible{
+  outline:3px solid rgba(245,216,61,.65);border-color:var(--gold)
+}
+.consent{color:var(--muted-strong)}
+.consent input,.freeze-label input{accent-color:var(--gold)}
+.consent a,.tftc-email-login .muted a{color:var(--gold)}
+.home-status,.demo-vote-steps span{background:#302817;color:var(--gold);border:1px solid rgba(216,173,39,.25)}
+.home-status small{color:var(--muted)}
+.faq-grid>div{border-color:var(--line)}
+.directory-toolbar{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.directory-results,.directory-results b{color:var(--muted-strong)}
+.directory-results button,.directory-card-actions button:hover{color:var(--gold)}
+.directory-card{background:var(--panel)}
+.directory-card-actions .directory-profile-action{background:var(--gold);color:#17130a}
+.directory-card-actions button{background:transparent;color:var(--text);border-color:var(--line-strong)}
+.directory-empty{border-color:var(--line-strong);color:var(--muted)}
+.directory-empty h3{color:var(--text)}
+.profile-eligible{background:#142b22;color:#9ce3bf}
+.legacy-access-panel,.legacy-direct-signin .demo-login,.mock-supporter-fields{background:var(--panel-alt);border:1px solid var(--line)}
+.legacy-access-panel>summary,.legacy-direct-signin>summary{color:var(--gold)}
+.legacy-direct-signin{border-color:var(--line)}
+.table-scroll{border-color:var(--line)}
+.table-scroll th{background:#25252d;color:var(--muted-strong)}
+.table-scroll td,.table-scroll th{border-color:var(--line)}
+.table-actions button{background:var(--panel-alt);border-color:var(--line-strong);color:var(--text);min-height:36px}
+.table-actions button:hover{border-color:var(--gold);color:var(--gold)}
+.staff-edit,.activity-list>div,.csv-preview{background:var(--panel-alt);border:1px solid var(--line);color:var(--text)}
+.csv-preview{border-color:var(--line)}
+.csv-preview summary{color:var(--gold)}
+.admin-view-tabs{background:var(--bg-950);border-color:var(--line)}
+.admin-view-tabs button{background:var(--panel);border-color:var(--line-strong);color:var(--text);min-height:44px}
+.admin-view-tabs button:hover,.admin-view-tabs button.active{background:#302817;border-color:var(--gold);color:var(--gold)}
+.admin-media-list article{border-color:var(--line);background:var(--panel)}
+.admin-media-list a{color:var(--gold)}
+.media-status-pending{background:#302817;color:#f3cf69}
+.media-status-approved{background:#142b22;color:#9ce3bf}
+.media-status-rejected{background:#301b20;color:#ffb1b7}
+.foot{border-color:var(--line);color:var(--muted)}
+.foot a:hover{color:var(--gold)}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 32px)}
+  .bar{min-height:64px}
+  .bar .btn{min-height:44px}
+  .mobile-nav summary{min-height:42px}
+}
